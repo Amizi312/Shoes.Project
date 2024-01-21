@@ -1,3 +1,19 @@
 .Home {
-	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    font-size: x-large;
+    text-align: center;
+    height: 70vh;
+    width: 80vw;
+}
+
+.Home iframe{
+    width: 400px;
+    height: 600px;
+    left: 30%;
+    bottom: 10px;
+    position: relative;
 }
