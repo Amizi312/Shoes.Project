@@ -8,10 +8,10 @@ function Routing(): JSX.Element {
     return (
         <div className="Routing">
 			<Routes>
-            <Route path="/home" element={<Home/>} />
-            <Route path="/bestseller" element={<BestSeller/>}/>
-            <Route path="/" element={<Navigate to="/home"/>} />
-            <Route path="*" element={<PageNotFound/>}/>
+                <Route path="/home" element={<Home/>} />
+                <Route path="/bestseller" element={<BestSeller/>}/>
+                <Route path="/" element={<Navigate to="/home"/>} />
+                <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </div>
     );

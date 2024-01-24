@@ -5,6 +5,7 @@ import crocs from "../../../assets/crocs.jpg"
 import adidas from "../../../assets/adidas.jpg"
 import saucony from "../../../assets/saucony.jpg"
 import redback from "../../../assets/redback.jpg"
+import RandomBrand from "../RandomBrand/RandomBrand";
 
 function BestSeller(): JSX.Element {
 	return (
@@ -14,6 +15,8 @@ function BestSeller(): JSX.Element {
 			<ShoesCard brand="Crocs" price={79.90} size={26} image={crocs}/>
 			<ShoesCard brand="RedBack" price={362} size={42} image={redback}/>
 			<ShoesCard brand="Saucony" price={214} size={45} image={saucony}/>
+			<br></br>
+			<RandomBrand/>
         </div>
     );
 }

@@ -7,3 +7,12 @@
     height: 70vh;
 width: 15vw;
 }
+
+.Links a{
+    text-decoration: none;
+    color: blue;
+    height: 20px;
+    padding: 5px;
+    font-size: larger;
+    font-weight: 700;
+}
