@@ -1,0 +1,7 @@
+.EmpCard {
+	border: 1px solid green;
+    padding: 5px;
+    margin: 10px;
+    width: 280px;
+    display: inline-flex;
+}

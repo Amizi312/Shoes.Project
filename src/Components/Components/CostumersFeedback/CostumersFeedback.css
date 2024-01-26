@@ -1,0 +1,4 @@
+.CostumersFeedback .FeedbackCard{
+    width: fit-content;
+    display: inline-flex;
+}

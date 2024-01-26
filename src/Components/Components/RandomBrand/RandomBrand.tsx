@@ -16,7 +16,7 @@ function RandomBrand(): JSX.Element {
         return ()=>{
             window.clearInterval(timerId)
         }
-    },[])
+    },[])    
     return (
         <div className="RandomBrand">
 			<span>Someone just bought a {brand}</span>
