@@ -5,14 +5,15 @@
     justify-content: center;
     text-align: center;
     height: 70vh;
-width: 15vw;
+    width: 15vw;
 }
 
 .Links a{
     text-decoration: none;
     color: blue;
-    height: 20px;
+    height: fit-content;
     padding: 5px;
     font-size: larger;
     font-weight: 700;
+    margin: 5px;
 }

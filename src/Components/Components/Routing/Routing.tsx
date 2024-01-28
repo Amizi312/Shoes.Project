@@ -6,6 +6,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import CostumersFeedback from "../CostumersFeedback/CostumersFeedback";
 import EmpWin from "../EmpWin/EmpWin";
+import SingleEmp from "../SingleEmp/SingleEmp";
 
 function Routing(): JSX.Element {
     return (
@@ -18,6 +19,7 @@ function Routing(): JSX.Element {
                 <Route path="/aboutus" element={<About/>}/>
                 <Route path="dotells" element={<CostumersFeedback/>}/>
                 <Route path="/workers" element={<EmpWin/>}/>
+                <Route path="/workers/:empId" element={<SingleEmp/>}/>
             </Routes>
         </div>
     );

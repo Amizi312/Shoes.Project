@@ -1,6 +1,6 @@
 class Conf{
 
-    public employeeUrl = "http://localhost:3030/api/employees"
+    public employeeUrl = "http://localhost:3030/api/employees/"
 }
 
 const appConf = new Conf()
