@@ -30,6 +30,11 @@ function SingleEmp(): JSX.Element {
             <img src={employee.imageUrl}/>
             </>}
             <br/>
+            <NavLink to={"/workers/editemployee/" + employee?.id}>Edit Worker</NavLink>
+            <span> | </span>
+            <NavLink to="/workers" onClick={()=>{
+                empService.deleteEmployee(employee.id)}}>Delete Worker</NavLink>
+            <span> | </span>
             <NavLink to="/workers">Back to all workers</NavLink>
 
         </div>
