@@ -32,7 +32,7 @@ function SingleEmp(): JSX.Element {
             <br/>
             <NavLink to={"/workers/editemployee/" + employee?.id}>Edit Worker</NavLink>
             <span> | </span>
-            <NavLink to="/workers" onClick={()=>{
+            <NavLink to="/workers/delete" onClick={()=>{
                 empService.deleteEmployee(employee.id)}}>Delete Worker</NavLink>
             <span> | </span>
             <NavLink to="/workers">Back to all workers</NavLink>

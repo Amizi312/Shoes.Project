@@ -9,6 +9,7 @@ import EmpWin from "../EmpWin/EmpWin";
 import SingleEmp from "../SingleEmp/SingleEmp";
 import NewEmp from "../NewEmp/NewEmp";
 import EditEmp from "../EditEmp/EditEmp";
+import DeleteEmp from "../DeleteEmp/DeleteEmp";
 
 function Routing(): JSX.Element {
     return (
@@ -24,7 +25,7 @@ function Routing(): JSX.Element {
                 <Route path="/workers/:empId" element={<SingleEmp/>}/>
                 <Route path="/workers/newemployee" element={<NewEmp/>}/>
                 <Route path="/workers/editemployee/:empId" element={<EditEmp/>}/>
-
+                <Route path="/workers/delete" element={<DeleteEmp/>}/>
             </Routes>
         </div>
     );
