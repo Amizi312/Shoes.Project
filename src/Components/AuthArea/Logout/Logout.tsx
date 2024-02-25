@@ -11,7 +11,7 @@ function Logout(): JSX.Element {
     useEffect(()=>{
         authService.logOut()
         notify.successMsg("Bye Bye")
-        navigate("/login")
+        navigate("/home")
     },[])
 
     return null

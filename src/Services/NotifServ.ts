@@ -1,7 +1,7 @@
 import { Notyf } from "notyf";
 
 class NotifServ{
-    private notif = new Notyf({duration: 10000, position: {x: "center", y:"center"} })
+    private notif = new Notyf({duration: 5000, position: {x: "center", y:"center"} })
    
     public successMsg(message:string):void {
         this.notif.success(message)
