@@ -10,6 +10,8 @@ import SingleEmp from "../SingleEmp/SingleEmp";
 import NewEmp from "../NewEmp/NewEmp";
 import EditEmp from "../EditEmp/EditEmp";
 import DeleteEmp from "../DeleteEmp/DeleteEmp";
+import Register from "../../AuthArea/Register/Register";
+import Login from "../../AuthArea/Login/Login";
 
 function Routing(): JSX.Element {
     return (
@@ -26,6 +28,8 @@ function Routing(): JSX.Element {
                 <Route path="/workers/newemployee" element={<NewEmp/>}/>
                 <Route path="/workers/editemployee/:empId" element={<EditEmp/>}/>
                 <Route path="/workers/delete" element={<DeleteEmp/>}/>
+                <Route path="/register" element={<Register/>}/>
+                <Route path="/login" element={<Login/>}/>
             </Routes>
         </div>
     );

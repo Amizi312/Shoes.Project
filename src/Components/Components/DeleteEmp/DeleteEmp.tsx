@@ -8,7 +8,7 @@ function DeleteEmp(): JSX.Element {
   useEffect(() => {
     setTimeout(() => {
       navigate("/workers")
-    }, 10)
+    }, 100)
   }, [])
         return (
         <div className="DeleteEmp">
