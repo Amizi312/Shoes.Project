@@ -3,6 +3,7 @@ import "./NewEmp.css";
 import EmpModel from "../../../Models/EmpModel";
 import empService from "../../../Services/EmpServ";
 import { useNavigate } from "react-router-dom";
+import notify from "../../../Services/NotifServ";
 
 function NewEmp(): JSX.Element {
     const {register, handleSubmit, formState} = useForm<EmpModel>()    
@@ -11,11 +12,11 @@ function NewEmp(): JSX.Element {
     async function send(employee:EmpModel) {
         try {
             await empService.addEmployee(employee)
-            alert("employee has been succesfully added!")
+            notify.successMsg("employee has been succesfully added!")
             navigate("/workers")
         }
         catch(err:any) {
-            alert(err.message)
+            notify.errorMsg(err.message)
         }
     }
 

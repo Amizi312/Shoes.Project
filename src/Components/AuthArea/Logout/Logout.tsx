@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./Logout.css";
 import { useEffect } from "react";
 import authService from "../../../Services/AuthService";
+import notify from "../../../Services/NotifServ";
 
 function Logout(): JSX.Element {
    
@@ -9,7 +10,7 @@ function Logout(): JSX.Element {
 
     useEffect(()=>{
         authService.logOut()
-        alert("Bye Bye")
+        notify.successMsg("Bye Bye")
         navigate("/login")
     },[])
 

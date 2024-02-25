@@ -3,6 +3,7 @@ import "./Login.css";
 import { useNavigate } from "react-router-dom";
 import authService from "../../../Services/AuthService";
 import CredModel from "../../../Models/CredModel";
+import notify from "../../../Services/NotifServ";
 
 function Login(): JSX.Element {
     const {register, handleSubmit} = useForm<CredModel>()
@@ -10,10 +11,10 @@ function Login(): JSX.Element {
     async function send(credentials:CredModel) {
         try {
             await authService.login(credentials)
-            alert("Welcome Back!")
+            notify.successMsg("Welcome Back")
             navigate("/home")
         } catch (error:any) {
-            alert(error.message)
+            notify.errorMsg(error)
         }
     }
     return (

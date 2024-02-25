@@ -5,6 +5,7 @@ import empService from "../../../Services/EmpServ";
 import EmpCard from "../EmpCard/EmpCard";
 import { NavLink } from "react-router-dom";
 import AllEmps from "../AllEmps/AllEmps";
+import notify from "../../../Services/NotifServ";
 
 function EmpWin(): JSX.Element {
     const [employees, setEmployees] = useState<EmpModel[]>([]) 
@@ -12,7 +13,7 @@ function EmpWin(): JSX.Element {
     useEffect(()=>{
       empService.getallEmployees()
       .then(employees=>setEmployees(employees))
-      .catch(err => alert(err.message))  
+      .catch(err => notify.errorMsg(err.message))  
     },[])
     return (
         <div className="EmpWin">

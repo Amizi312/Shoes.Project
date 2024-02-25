@@ -4,6 +4,7 @@ import EmpModel from "../../../Models/EmpModel";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import empService from "../../../Services/EmpServ";
+import notify from "../../../Services/NotifServ";
 
 function EditEmp(): JSX.Element {
     const {register, handleSubmit, formState, setValue} = useForm<EmpModel>()    
@@ -25,17 +26,17 @@ function EditEmp(): JSX.Element {
                 setValue("title",employee.title)
                 setValue("imageUrl",employee.imageUrl)
             })
-            .catch(err => alert("Error" + err.message))
+            .catch(err => notify.errorMsg("Error" + err.message))
     },[])
 
     async function send(employee:EmpModel) {
         try {
             await empService.editEmployee(employee)
-            alert("Employee have been updated succefully")
+            notify.successMsg("Employee have been updated succefully")
             navigate("/workers")
         }
         catch(err:any) {
-            alert(err.message)
+            notify.errorMsg(err.message)
         }
     }
 
